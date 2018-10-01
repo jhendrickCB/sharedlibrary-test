@@ -6,7 +6,7 @@ def call(Map pipelineParams) {
     stages {
       stage('Build') {
         steps {
-          echo "Building application"
+          echo "Building application, email = ${pipelineParams.email}"
         }
       } 
       stage('Deploy') {
